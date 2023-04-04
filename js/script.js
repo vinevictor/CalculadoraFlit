@@ -4,6 +4,8 @@ let btnE = document.querySelectorAll(".itemE");
 let igual = document.querySelector(".igual");
 let ponto = document.querySelector(".ponto");
 
+let ultResultado = document.querySelector(".ultResultado");
+
 let display = document.querySelector(".item1");
 let resultado = 0;
 let operacao = "";
@@ -20,16 +22,6 @@ btn.forEach((botao) => {
     display.textContent += botao.getAttribute("value");
   });
 });
-
-// btn.forEach((botao) => {
-//   botao.addEventListener("click", () => {
-//     if (display.textContent === "0" || resultado) {
-//       display.textContent = "";
-//       resultado = null;
-//     }
-//     display.textContent += botao.getAttribute("value");
-//   });
-// });
 
 btnE.forEach((botaoE) => {
   botaoE.addEventListener("click", () => {
@@ -100,6 +92,7 @@ igual.addEventListener("click", () => {
         break;
     }
     display.textContent = resultado;
+    ultResultado.textContent = resultado;
     operacao = "";
     num1 = null;
     num2 = null;
